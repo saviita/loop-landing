@@ -13,7 +13,14 @@ ul {
     padding-left: 0;
 }
 
+.title-l, .title-m, .title-s {
+    font-family: "Josefin Sans";
+    font-weight: 300;
+}
+
 .main {
+    max-width: 1114px;
+    margin-inline: auto;
     padding: 24px;
     margin-bottom: 96px;
 }
@@ -114,9 +121,7 @@ ul {
 
 .title-l {
     color: #FFF;
-    font-family: "Josefin Sans";
     font-size: 40px;
-    font-weight: 300;
     line-height: 38px;
     margin: 0;
     max-width: 12ch;
@@ -131,9 +136,7 @@ ul {
 }
 
 .title-m {
-    font-family: "Josefin Sans";
     font-size: 32px;
-    font-weight: 300;
     line-height: 32px;
     text-transform: uppercase;
 }
@@ -200,9 +203,7 @@ ul {
 }
 
 .title-s {
-    font-family: "Josefin Sans";
     font-size: 24px;
-    font-weight: 300;
     line-height: 24px;
 }
 
@@ -327,13 +328,11 @@ ul {
         width: 144px;
     }
 
-    .footer-ul {
-        flex-direction: row;
+    .footer-rrss {
+        justify-content: right;
     }
 
-    .footer-bot {
-        display: flex;
-        flex-direction: column;
-        justify-content: right;
+    .footer-ul {
+        flex-direction: row;
     }
 }
