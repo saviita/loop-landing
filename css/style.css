@@ -34,7 +34,7 @@ ul {
 .bar {
     position: absolute;
     z-index: 10;
-    padding-inline: 164px;
+    padding-inline: 24px;
     left: 0;
     top: 40px;
     width: 100%;
@@ -83,13 +83,36 @@ ul {
 
 }
 
+@media screen and (width>1024px) {
+    .bar {
+        padding-inline: 164px;
+    }
+
+    .bar-icon {
+        display: none;
+    }
+
+    .bar-nav {
+        display: flex;
+    }
+
+    .header {
+        padding: 64px 162px 0 162px;
+        background-image: url(../assets/desktop/image-hero.jpg);
+    }
+
+    .main {
+        padding: 64px 162px 0 162px;
+    }
+}
+
 .top-title {
-    max-width: 650px;
+    max-width: 327px;
     border: 2px solid #FFF;
     padding: 26px 24px 24px;
 }
 
-.title-1 {
+.title-l {
     color: #FFF;
     font-family: "Josefin Sans";
     font-size: 40px;
@@ -107,7 +130,7 @@ ul {
     margin-bottom: 48px;
 }
 
-.title-2 {
+.title-m {
     font-family: "Josefin Sans";
     font-size: 32px;
     font-weight: 300;
@@ -128,13 +151,55 @@ ul {
     line-height: 25px;
 }
 
+@media screen and (width>1024px) {
+    .top-title {
+        max-width: 650px;
+    }
+
+    .title-l {
+        font-size: 72px;
+        line-height: 70px;
+    }
+
+    .intro {
+        position: relative;
+    }
+
+    .intro-img {
+        max-width: 731px;
+    }
+
+    .intro-info {
+        background-color: #FFF;
+        text-align: left;
+        position: absolute;
+        bottom: -1px;
+        left: 500px;
+        width: 541px;
+        height: 317px;
+        padding: 96px 0 0 96px;
+    }
+
+    .intro-title {
+        font-size: 48px;
+        line-height: 48px;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+    .text {
+        margin: 0;
+    }
+}
+
 .creations {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 24px;
 }
 
-.title-3 {
+.title-s {
     font-family: "Josefin Sans";
     font-size: 24px;
     font-weight: 300;
@@ -149,7 +214,7 @@ ul {
 .creation {
     background-image: linear-gradient(to right, rgb(0 0 0 / 0.6), transparent);
     position: relative;
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
 }
 
 .creation-img {
@@ -180,6 +245,25 @@ ul {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 5px;
+}
+
+@media screen and (width>1024px) {
+    .creations {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .creations-title {
+        text-align: left;
+        grid-column: 1/3;
+    }
+
+    .creation-btn {
+        justify-self: right;
+        grid-column: 3/5;
+        grid-row: 1/2;
+    }
 }
 
 .footer {
@@ -233,79 +317,7 @@ ul {
     gap: 16px;
 }
 
-@media screen and (width>768px) {
-    .bar-icon {
-        display: none;
-    }
-
-    .bar-nav {
-        display: flex;
-    }
-
-    .header {
-        padding: 64px 162px 0 162px;
-    }
-
-    .main {
-        padding: 64px 162px 0 162px;
-    }
-
-    .title-1 {
-        font-size: 72px;
-        line-height: 70px;
-    }
-
-    .intro {
-        position: relative;
-    }
-
-    .intro-img {
-        max-width: 731px;
-    }
-
-    .intro-info {
-        background-color: #FFF;
-        text-align: left;
-        position: absolute;
-        top: 0;
-        left: 570px;
-        width: 541px;
-        height: 317px;
-        padding: 96px 0 0 96px;
-    }
-
-    .intro-title {
-        font-size: 48px;
-        line-height: 48px;
-        margin-top: 0;
-        margin-bottom: 25px;
-    }
-
-    .text {
-        margin: 0;
-    }
-
-    .creations {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
-    }
-
-    .creations-title {
-        text-align: left;
-        grid-column: 1/3;
-    }
-
-    .creation-img {
-        height: 100%;
-    }
-
-    .creation-btn {
-        justify-self: right;
-        grid-column: 3/5;
-        grid-row: 1/2;
-    }
-
+@media screen and (width>1024px) {
     .footer {
         flex-direction: row;
         justify-content: space-between;
