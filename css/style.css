@@ -7,30 +7,86 @@ img {
     max-width: 100%;
 }
 
+ul {
+    list-style: none;
+    margin-block: 0;
+    padding-left: 0;
+}
+
+.main {
+    padding: 24px;
+    margin-bottom: 96px;
+}
+
 .header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 650px;
     background-image: url(../assets/mobile/image-hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 24px;
+    margin-bottom: 96px;
 }
 
 .bar {
+    position: absolute;
+    z-index: 10;
+    padding-inline: 164px;
+    left: 0;
+    top: 40px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between
+    justify-content: space-between;
+    align-items: center;
 }
 
-.bar-cross {
+.bar-nav {
     display: none;
+    flex-direction: row;
+    gap: 32px;
 }
 
-.nav {
+.bar-option {
+    color: #FFF;
+    font-family: Alata;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.menu-ul {
+    color: #FFF;
+    background-color: #000;
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 24px;
 }
 
-@media screen and (width>768px) {
-    
+.menu-show {
+    display: flex;
+}
+
+.menu-option {
+    font-family: "Josefin Sans";
+    font-size: 24px;
+    font-weight: 300;
+
+}
+
+.top-title {
+    max-width: 650px;
+    border: 2px solid #FFF;
+    padding: 26px 24px 24px;
 }
 
 .title-1 {
@@ -39,14 +95,233 @@ img {
     font-size: 40px;
     font-weight: 300;
     line-height: 38px;
+    margin: 0;
+    max-width: 12ch;
 }
 
-.top-title {
-    border: 2px solid #FFF;
-    padding: 26px 24px 24px;
-    margin-top: 163px;
+.intro {
+    margin-bottom: 96px;
 }
 
-.main {
-    padding: 24px;
+.intro-img {
+    margin-bottom: 48px;
+}
+
+.title-2 {
+    font-family: "Josefin Sans";
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+.intro-info {
+    text-align: center;
+}
+
+.text {
+    color: #808080;
+    font-family: Alata;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.creations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-3 {
+    font-family: "Josefin Sans";
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.creations-title {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.creation {
+    background-image: linear-gradient(to right, rgb(0 0 0 / 0.6), transparent);
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.creation-img {
+    position: relative;
+    z-index: -1;
+}
+
+.creation-title {
+    position: absolute;
+    top: 52px;
+    left: 24px;
+    margin: 0;
+    max-width: 9ch;
+    text-align: left;
+    color: #FFF;
+}
+
+.creation-title--small {
+    max-width: 6ch;
+}
+
+.creation-btn {
+    background-color: #FFF;
+    border: 1px solid #000;
+    width: 157px;
+    height: 40px;
+    font-family: Alata;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    background-color: #000;
+    padding: 56px 51px 56px;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.footer-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-option {
+    color: #FFF;
+    font-family: Alata;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.footer-rrss {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+}
+
+.footer-text {
+    color: #808080;
+    font-family: Alata;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.footer-bot {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media screen and (width>768px) {
+    .bar-icon {
+        display: none;
+    }
+
+    .bar-nav {
+        display: flex;
+    }
+
+    .header {
+        padding: 64px 162px 0 162px;
+    }
+
+    .main {
+        padding: 64px 162px 0 162px;
+    }
+
+    .title-1 {
+        font-size: 72px;
+        line-height: 70px;
+    }
+
+    .intro {
+        position: relative;
+    }
+
+    .intro-img {
+        max-width: 731px;
+    }
+
+    .intro-info {
+        background-color: #FFF;
+        text-align: left;
+        position: absolute;
+        top: 0;
+        left: 570px;
+        width: 541px;
+        height: 317px;
+        padding: 96px 0 0 96px;
+    }
+
+    .intro-title {
+        font-size: 48px;
+        line-height: 48px;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+    .text {
+        margin: 0;
+    }
+
+    .creations {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .creations-title {
+        text-align: left;
+        grid-column: 1/3;
+    }
+
+    .creation-img {
+        height: 100%;
+    }
+
+    .creation-btn {
+        justify-self: right;
+        grid-column: 3/5;
+        grid-row: 1/2;
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-logo {
+        width: 144px;
+    }
+
+    .footer-ul {
+        flex-direction: row;
+    }
+
+    .footer-bot {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+    }
 }
